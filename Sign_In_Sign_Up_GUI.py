@@ -173,7 +173,8 @@ def sign_in_func(event):
                 clear.bind("<Button-1>", sign_in_clear)
                 clear.pack(side = "left", padx=5, pady=5)
 
-#
+#This function does the checking if the inputted username and
+#password are in the table and are correct
 def sign_in_helper(u,p):
     my_cursor.execute("SELECT user,pass FROM Users")
     for x,y in my_cursor:
@@ -181,7 +182,12 @@ def sign_in_helper(u,p):
             return True
     return False
 
+#######################################################################################################################################
+
+#Array or common and possibly malicious SQL commands
 bad_input = ["DROP", "DELETE", "--", "UPDATE", "AND", "OR", "=", ">", "<", "FROM"]
+
+#Connects to the database
 db = mysql.connector.connect(
     host = 'localhost',
     user = 'root',
@@ -189,8 +195,12 @@ db = mysql.connector.connect(
     database = 'LogIn'
 )
 my_cursor = db.cursor(buffered=True)
+
+#Draws the original page with the sign in and sign up button
 window = tk.Tk()
 window.configure(bg="Light Blue")
+
+#Creates the variables to be used later on
 name_var = tk.StringVar()
 user_var = tk.StringVar()
 password_var = tk.StringVar()
@@ -202,6 +212,8 @@ for i in range(3):
     for j in range(3):
         new_frame = tk.Frame(master=window, bg="Light Blue")
         new_frame.grid(row = i, column=j, padx=5, pady=5)
+        
+        #Creates the sign up and sign in button
         if i == 1 and j == 1:
             sign_up = tk.Button(master=new_frame, width=10, height=2,text="Sign Up")
             sign_up.bind("<Button-1>", sign_up_func)
