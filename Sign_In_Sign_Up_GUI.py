@@ -1,6 +1,8 @@
 import tkinter as tk
 import mysql.connector
 
+#This function effectively "clears" the original screen to
+#allow the sign in/sign up page to be displayed
 def forget():
     for i in range(3):
         for j in range(3):
@@ -8,11 +10,22 @@ def forget():
     sign_up.pack_forget()
     sign_in.pack_forget()
 
+#This function creates the sign up page
 def sign_up_func(event):
+    
+    #Variables to be used
     global name_var
     global user_var
     global password_var
+    
+    #Clears the screen
     forget()
+    
+    #This function handles the even where the submit button is pressed
+    #It checks if the name, username or the password have any common
+    #SQL commands. If it does, it clears the inputted values and displays
+    #a message. If it doesn't, it will add the name, username and password
+    #to a SQL table.
     def sign_up_submit(event):
         name = name_var.get()
         username = user_var.get()
@@ -34,31 +47,43 @@ def sign_up_func(event):
             name_entry.delete(0,'end')
             username_entry.delete(0,'end')
             password_entry.delete(0,'end')
+            
+    #Draws the sign up page and the labels to be displayed based on input
     for i in range(5):
         window.columnconfigure(i,weight = 5,minsize=75)
         window.rowconfigure(i,weight = 5,minsize=50)
         for j in range(3):
             new_frame = tk.Frame(master=window, bg="Light Blue")
             new_frame.grid(row = i, column=j, padx=5, pady=5)
+            
+            #Name box
             if i == 0 and j == 2:
                 label_name = tk.Label(master= new_frame, text="Name: ")
                 label_name.pack(side="top")
                 name_entry = tk.Entry(master= new_frame,textvariable = name_var, font=('calibre',10,'normal'))
                 name_entry.pack()
+                
+            #Username box
             if i == 1 and j == 2:
                 label_name2 = tk.Label(master= new_frame, text="Username: ")
                 label_name2.pack(side="top")
                 username_entry = tk.Entry(master= new_frame,textvariable = user_var, font=('calibre',10,'normal'))
                 username_entry.pack()
+                
+            #Password box
             if i == 2 and j == 2:
                 label_name3 = tk.Label(master= new_frame, text="Password: ")
                 label_name3.pack(side="top")
                 password_entry = tk.Entry(master= new_frame,textvariable = password_var, font=('calibre',10,'normal'))
                 password_entry.pack()
+                
+            #Label in case the user inputted any common SQL commands
             if i == 3 and j == 2:
                 label_name4 = tk.Label(master= new_frame, text="Bad Input. Please Retry.")
                 label_name4.pack(side="top")
                 label_name4.pack_forget()
+                
+            #Submit button
             if i == 4 and j == 2:
                 submit = tk.Button(master=new_frame, width=10, height=2,text="Submit")
                 submit.bind("<Button-1>", sign_up_submit)
