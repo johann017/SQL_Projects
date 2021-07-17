@@ -3,7 +3,7 @@
 ## Setup
 - Install [GitHub CLI](https://cli.github.com/) and connect it with GitHub account
 - Open up Git CMD
-- Run `gh repo clone johann017/API_Projects` in the command line
+- Run `gh repo clone johann017/SQL_Projects` in the command line
 
 `MySQLPractice.py`:
 To run this, type the following in to the command line:
