@@ -1,11 +1,22 @@
 # SQL_Projects
 
 ## Setup
-To run `MySQLPractice.py`:
-- `python MySQLPractice.py`
+- Install [GitHub CLI](https://cli.github.com/) and connect it with GitHub account
+- Open up Git CMD
+- Run `gh repo clone johann017/API_Projects` in the command line
 
-To run `Sign_In_Sign_Up_GUI.py`:
-- `python Sign_In_Sign_Up_GUI.py`
+`MySQLPractice.py`:
+To run this, type the following in to the command line:
+  ```
+  python MySQLPractice.py
+  ```
+
+
+`Sign_In_Sign_Up_GUI.py`:
+To run this, type the following in to the command line:
+  ```
+  python Sign_In_Sign_Up_GUI.py
+  ```
 
 ## Description
 - ### `MySQLPractice.py`
