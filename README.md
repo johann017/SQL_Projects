@@ -1,4 +1,4 @@
-# Working_With_SQL
+# SQL_Projects
 
 ## Setup
 To run `MySQLPractice.py`:
