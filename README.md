@@ -3,9 +3,9 @@
 ## Description
 - ### `MySQLPractice.py`
   - #### Overview: 
-    - This program will create a table, read a list of users and add their position to the table. 
+    - This program creates a table, reads user list and adds their progressive rank to the table. 
   - #### Details: 
-    - There will be one query statement that will be used to add each name in a loop as they are read. Before the end of the file, the program will print the contents of the table. At the end of this program, the table and its contents will be dropped so that if this program is run again, the table wont exit.
+    - A query statement is used to add each name in a loop as they are read. Before the end of the file, the program prints the contents of the table. At the end of this program, the table and its contents will be dropped so that if this program is run again, the table wont exist.
 
 - ### `Sign_In_Sign_Up_GUI.py`
     This program creates a GUI that will allow users to sign in or sign up. 
