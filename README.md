@@ -25,8 +25,7 @@
 <h3 align="center">Sign in</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/57604319/125364694-c992c180-e327-11eb-824b-1bcec3cdd035.PNG" height = 300 width = 300/>
-</p> |
-
+</p>
 
 ## Setup
 - Install [GitHub CLI](https://cli.github.com/) and connect to GitHub account
