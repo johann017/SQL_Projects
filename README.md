@@ -9,7 +9,7 @@
 
 - ### `Sign_In_Sign_Up_GUI.py`
   - #### Overview:
-    - This program creates an application that features an interactive interface which gives users an option to sign in or to sign up and handle either event appropriately. 
+    - This program creates an application that features an interactive interface which gives users an option to sign in or sign up. 
   
   - #### Details:
     - If user chooses to sign up, three fields to enter a name, a username and a password is displayed. From there, this information is stored in a table in the background. If the user chooses to sign in, a username and password field is displayed to be filled out. The user's input is then used to check if the username and password is in the table. Depending if the input matched or not, there is a message displayed according to the outcome. This program cleans the user input by checking if it contains any key SQL commands as a way to prevent the user from doing a basic SQL injection.
