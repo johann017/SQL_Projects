@@ -12,7 +12,7 @@
     - This program creates an application that features an interactive interface which gives users an option to sign in or sign up. 
   
   - #### Details:
-    - If user chooses to sign up, they can enter a name, username and password in the fields provided and this information is stored in a table. If the user chooses to sign in, they can enter a username and password in the fields provided. This combinatio is checked against the entries in the table and a message is displayed accordingly. This program performs a form of input sanitization to prevent the user from doing a basic SQL injection.
+    - If user chooses to sign up, they can enter a name, username and password in the fields provided and this information is stored in a table. If the user chooses to sign in, they can enter a username and password in the fields provided. This combination is checked against the entries in the table and a message is displayed accordingly. This program performs a form of input sanitization to prevent the user from doing a basic SQL injection.
 
 <h3 align="center">Main Page</h3>
 <p align="center">
